@@ -1,0 +1,26 @@
+{
+  "name": "base",
+  "version": "1.0.0",
+  "description": "&nbsp;&nbsp;&nbsp;&nbsp;__Os itens deste processo são para cobrir a maioria dos desafios que você ira ter dentro da **Senff**__\r ## Tempo de processo\r &nbsp;&nbsp;&nbsp;&nbsp;Este processo tem um tempo limite de 3 dias corridos para ser finalizado, mas caso queira finalizar o processo antes fique a vontade.\r ## Atividades e Instruções\r &nbsp;&nbsp;&nbsp;&nbsp;Criar um fork desse projeto nesta mesma estrutura(utilizar seu nome para o novo projeto criado).Criar um branch a partir da main com o nome finalizar/processo, para finalizar o processo crie um MergeRequest para a branch main.\r 1. Teste de integração com Cypress/Selenium e BDD:\r     1. Crie um cenário de teste com BDD para testar o método POST para criar um novo Objecto.\r     2. Implemente o cenário usando o Cypress/Selenium para enviar uma solicitação POST para o endpoint https://restful-api.dev com um novo Objecto.\r     3. Verifique se a resposta da solicitação contém o código de status 201 e os dados do Objecto criado.\r     4. Repita o processo para testar os métodos PUT, PATCH e DELETE para atualizar, modificar e excluir um Objecto existente.\r 2. Teste de integração com Appium:\r     1. Crie um cenário de teste para testar o aplicativo da Senff em um dispositivo Android ou iOS usando Appium.\r     2. Implemente o cenário para abrir o aplicativo, clicar no botão \"Pedir cartão\" e verificar se o site https://meucartao.senff.com.br/senff é aberto.\r 3. Teste de end-to-end com Cypress/Selenium e BDD:\r     1. Crie um cenário de teste com BDD para testar a funcionalidade do site https://restful-api.dev.\r     2. Implemente o cenário usando o Cypress/Selenium para simular o fluxo do usuário no site, clicar em Rest Fundamentals, Privacy Policy, Contact\r 4. Teste de carga com Artilery/K6:\r     1. Crie um cenário de teste para simular um grande número de solicitações simultâneas para o endpoint https://restful-api.dev usando Artilery/K6.\r     2. Implemente o cenário para enviar solicitações GET, POST, PUT, PATCH e DELETE simultaneamente e verificar se o sistema pode lidar com a carga.\r 5. Teste de desempenho com Artilery/K6:\r     1. Crie um cenário de teste para medir o desempenho do endpoint https://restful-api.dev usando Artilery/K6.\r     2. Implemente o cenário para enviar solicitações GET, POST, PUT, PATCH e DELETE em diferentes volumes e verificar o tempo de resposta e o tempo de latência.\r 6. Instruções SQL em Postgre (Nome das tabelas * test_users, test_address, test_mails * para o nome dos campos utilize o que achar mais apropriado):\r     1. Crie uma consulta SQL para selecionar todos os usuários cujo endereço contenha \"São Paulo\".\r     2. Crie uma consulta SQL para atualizar o e-mail de um usuário específico.\r     3. Crie uma consulta SQL para excluir todos os usuários que não têm endereço definido na tabela de usuários.\r     4. Crie uma consulta SQL para calcular a média de idade de todos os usuários que têm mais de 18 anos na tabela de usuários.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "cypress-cucumber-preprocessor": {
+    "step_definitions": "cypress/support/steps"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^9.1.2",
+    "@cypress/webpack-preprocessor": "^5.17.1",
+    "@types/chai": "^4.3.5",
+    "@types/cypress": "^1.1.3",
+    "cucumber": "^6.0.7",
+    "cypress": "^12.11.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "mochawesome": "^7.1.3",
+    "ts-loader": "^8.2.0",
+    "typescript": "^5.0.4"
+  }
+}

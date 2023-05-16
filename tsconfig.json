@@ -1,0 +1,18 @@
+  {
+    "compilerOptions": {
+      "watch": true,
+      "outDir": "./dist",
+      "strict": true,
+      "baseUrl": ".",
+      "target": "es6",
+      "lib": ["es6", "dom"],
+      "types": ["cypress", "node"],
+      "moduleResolution": "node",
+      "resolveJsonModule": true,
+      "skipLibCheck": true,
+      "allowSyntheticDefaultImports": true,
+      "allowJs": true,
+      "typeRoots": ["node_modules/@types", "typings"]
+    },
+    "include": ["**/*.ts","**/*.json"]
+  }
